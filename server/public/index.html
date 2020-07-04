@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/style.css">
+    <script src="vendors/jquery.js"></script>
+    <script src="scripts/client.js"></script>
+    <title>Mase's Task Manager</title>
+</head>
+<body>
+    <h1>Task Manager</h1>
+    <h2>Today's Date: <span id="todayDateSpan"></span></h2>
+    <form>
+        <h3>Add New Task</h3>
+        <input type="date" id="dueDateIn">
+        <input type="text" id="taskTitleIn" placeholder="Task Title">
+        <input type="text" id="taskDescriptionIn" placeholder="Task Description">
+        <label for="urgency">Urgency:</label>
+        <select name="urgency" id="urgencyIn">
+            <option value="1">Low</option>
+            <option value="2">Medium</option>
+            <option value="3">High</option>
+            <option value="4">ASAP</option>
+        </select>
+        <button type="button" id="addButton">Add</button>
+    </form>
+</body>
+</html>
