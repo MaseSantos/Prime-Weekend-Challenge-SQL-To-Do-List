@@ -11,19 +11,36 @@
 <body>
     <h1>Task Manager</h1>
     <h2>Today's Date: <span id="todayDateSpan"></span></h2>
-    <form>
-        <h3>Add New Task</h3>
-        <input type="date" id="dueDateIn">
-        <input type="text" id="taskTitleIn" placeholder="Task Title">
-        <input type="text" id="taskDescriptionIn" placeholder="Task Description">
-        <label for="urgency">Urgency:</label>
-        <select name="urgency" id="urgencyIn">
-            <option value="1">Low</option>
-            <option value="2">Medium</option>
-            <option value="3">High</option>
-            <option value="4">ASAP</option>
-        </select>
-        <button type="button" id="addButton">Add</button>
-    </form>
+    <section>
+        <form>
+            <h3>Add New Task</h3>
+            <input type="date" id="dueDateIn">
+            <input type="text" id="taskNameIn" placeholder="Task Name">
+            <input type="text" id="descriptionIn" placeholder="Description">
+            <label for="urgency">Urgency:</label>
+            <select name="urgency" id="urgencyIn">
+                <option value="1">Low</option>
+                <option value="2">Medium</option>
+                <option value="3">High</option>
+                <option value="4">ASAP</option>
+            </select>
+            <button type="button" id="addButton">Add</button>
+        </form>
+    </section>
+    <section>
+        <h2>To Do</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Due Date</th>
+                    <th>Task Name</th>
+                    <th>Description</th>
+                    <th>Urgency</th>
+                </tr>
+            </thead>
+            <tbody id="viewAllTasks">
+            </tbody>
+        </table>
+    </section>
 </body>
 </html>
