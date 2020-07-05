@@ -3,9 +3,9 @@ $(document).ready(function () {
     console.log("JQ");
     getTasks();
     $("#addButton").on("click", addNewTask);
-    $("#viewNotDoneTasks").on("click", ".taskDoneButton", changeToDone);
+    $("#viewNotDoneTasks").on("click", ".taskDoneButton", changeStatus);
     $("#viewNotDoneTasks").on("click", ".deleteTaskButton", deleteTask);
-    $("#viewDoneTasks").on("click", ".taskNotDoneButton", changeToNotDone);
+    $("#viewDoneTasks").on("click", ".taskNotDoneButton", changeStatus);
     $("#viewDoneTasks").on("click", ".deleteTaskButton", deleteTask);
 });
 
@@ -93,12 +93,8 @@ function clearInputsAfterSend() {
     $("#urgencyIn").val("")
 }
 
-function changeToDone(){
+function changeStatus(){
     console.log('in Change To Done function!!', $(this).data("id"));
-}
-
-function changeToNotDone() {
-    console.log('in Change To Not Done function!!', $(this).data("id"));
 }
 
 function deleteTask() {

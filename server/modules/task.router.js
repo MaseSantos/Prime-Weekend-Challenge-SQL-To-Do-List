@@ -5,7 +5,8 @@ const pool = require('./pool');
 //GET
 router.get('/', (req, res) => {
     console.log('in router /task GET');
-    let queryString = `SELECT * FROM "tasks" ORDER BY "done", "due_date" DESC, "urgency" DESC`;
+    let queryString = `SELECT * FROM "tasks" ORDER BY "done", 
+    "due_date" ASC, "urgency" DESC`;
     pool.query(queryString).then((result) => {
         // success
         res.send(result.rows);
