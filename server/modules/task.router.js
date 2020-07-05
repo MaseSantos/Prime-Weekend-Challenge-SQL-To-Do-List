@@ -33,8 +33,17 @@ router.post('/', (req, res) => {
 })
 
 //PUT
-
-
+router.put('/:id', (req, res) => {
+    console.log('/task PUT:', req.body, req.params.id);
+    // update first name of the bird with this ID
+    const queryString = `UPDATE "tasks" SET done=TRUE WHERE id=${req.params.id};`;
+    pool.query(queryString).then((results) => {
+        res.sendStatus(200);
+    }).catch((err) => {
+        console.log(err);
+        res.sendStatus(500);
+    })
+})
 
 //DELETE
 router.delete('/:id', (req, res)=>{

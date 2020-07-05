@@ -3,9 +3,8 @@ $(document).ready(function () {
     console.log("JQ");
     getTasks();
     $("#addButton").on("click", addNewTask);
-    $("#viewNotDoneTasks").on("click", ".taskDoneButton", changeStatus);
+    $("#viewNotDoneTasks").on("click", ".taskDoneButton", changeToDone);
     $("#viewNotDoneTasks").on("click", ".deleteTaskButton", deleteTask);
-    $("#viewDoneTasks").on("click", ".taskNotDoneButton", changeStatus);
     $("#viewDoneTasks").on("click", ".deleteTaskButton", deleteTask);
 });
 
@@ -47,9 +46,8 @@ function getTasks() {
                 el2.append(`<tr>
                 <td>${response[i].due_date.split("T")[0]}</td>
                 <td>${response[i].task_name}</td>
+                <td>${response[i].description}</td>
                 <td>${urgencyLevel}</td>
-                <td><button class="taskNotDoneButton" data-id=${response[i].id}>
-                    x</button></td>
                 <td><button class="deleteTaskButton" data-id=${response[i].id}>
                     Delete</button></td>
                 </tr>`)
@@ -93,8 +91,16 @@ function clearInputsAfterSend() {
     $("#urgencyIn").val("")
 }
 
-function changeStatus(){
-    console.log('in Change To Done function!!', $(this).data("id"));
+function changeToDone() {
+        $.ajax({
+            type: 'PUT',
+            url: '/task/' + $(this).data("id"),
+        }).then(function (response) {
+            console.log("Back from PUT with:", response);
+            getTasks();
+        }).catch(function (err) {
+            console.log("Error on Client PUT");
+        })
 }
 
 function deleteTask() {
