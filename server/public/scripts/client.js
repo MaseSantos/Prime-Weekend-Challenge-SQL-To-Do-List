@@ -37,9 +37,9 @@ function getTasks() {
                 <td>${response[i].task_name}</td>
                 <td>${response[i].description}</td>
                 <td>${urgencyLevel}</td>
-                <td><button class="taskDoneButton" data-id=${response[i].id}>
+                <td><button class="btn btn-primary taskDoneButton" data-id=${response[i].id}>
                 ✓</button></td>
-                <td><button class="deleteTaskButton" data-id=${response[i].id}>
+                <td><button class="btn btn-primary deleteTaskButton" data-id=${response[i].id}>
                     Delete</button></td>
                 </tr>`)
             } else{
@@ -48,7 +48,7 @@ function getTasks() {
                 <td>${response[i].task_name}</td>
                 <td>${response[i].description}</td>
                 <td>${urgencyLevel}</td>
-                <td><button class="deleteTaskButton" data-id=${response[i].id}>
+                <td><button class="btn btn-primary deleteTaskButton" data-id=${response[i].id}>
                     Delete</button></td>
                 </tr>`)
             }
@@ -60,7 +60,6 @@ function getTasks() {
 }
 
 function addNewTask(){
-    console.log("in addButton on click");
     let taskToSend = {
         due_date: $("#dueDateIn").val(),
         task_name: $("#taskNameIn").val(),
