@@ -1,5 +1,28 @@
-
-/* all of document styling */
-body{
-    background-color: #ffdbfe;
+table{
+    width: 70%;
+    margin: 0 auto;
+    border-radius: 10px;
 }
+
+.notDoneTaskTable{
+    background-color: #ADFFF7;
+}
+
+.doneTaskTable{
+    background-color: #C2E5FF;
+}
+
+.btn-primary{
+    background-color: #ffadc6;
+    color: #1e1e24;
+    border: 0px;
+}
+
+input{
+    margin-left: 10px;
+}
+
+#addButton{
+    margin-left: 10px;
+}
+
