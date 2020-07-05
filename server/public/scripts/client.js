@@ -1,6 +1,7 @@
 $(document).ready(function () {
     console.log("JQ");
     getTasks();
+    $("#addButton").on("click", addNewTask);
 });
 
 function getTasks() {
@@ -47,4 +48,36 @@ function getTasks() {
         console.log(err);
         alert('Error on Client GET');
     })
+}
+
+function addNewTask(){
+    console.log("in addButton on click");
+    let taskToSend = {
+        due_date: $("#dueDateIn").val(),
+        task_name: $("#taskNameIn").val(),
+        description: $("#descriptionIn").val(),
+        urgency: $("#urgencyIn").val(),
+        done: false
+    };
+    $.ajax({
+        type: "POST",
+        url: "/task",
+        data: taskToSend
+    })
+        .then(function (response) {
+            console.log("back from POST Client:", response);
+            getTasks();
+        })
+        .catch(function (err) {
+            console.log(err);
+            alert("ERROR, check client.js POST");
+        });
+    clearInputsAfterSend();
+}
+
+function clearInputsAfterSend() {
+    $("#dueDateIn").val(""),
+    $("#taskNameIn").val(""),
+    $("#descriptionIn").val(""),
+    $("#urgencyIn").val("")
 }
