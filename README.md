@@ -4,7 +4,10 @@
 Mase Santos
 >Duration: Weekend Sprint
 
-![Task Manager View](./TaskManagerDemoGif.gif)
+## Application Views
+![Task Manager Add Task View](./1.png)
+![Task Manager Choose Task Due Date View](./2.png)
+![Task Manager Completed Task View](./3.png)
 
 ## Application Overview
 
