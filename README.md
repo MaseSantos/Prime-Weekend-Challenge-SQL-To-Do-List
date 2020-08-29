@@ -11,7 +11,7 @@ Mase Santos
 
 ## Application Overview
 
-This application was created over a weekend sprint, in order to show knowledge in ***JavaScript, jQuery SQL, Node, and Express.*** With this application, a user can CREATE new tasks in the task manager, READ all tasks in the database, UPDATE tasks to mark them as "Done," and DELETE tasks should they want to. 
+This application serves as a minimalist task manager, with a generally monochromatic blue scheme for a calming experience. With this application, a user can CREATE new tasks in the task manager, READ all tasks in the database, UPDATE tasks to mark them as "Done," and DELETE tasks should they want to. This application was created over a weekend sprint, in order to show knowledge in ***JavaScript, jQuery SQL, Node, and Express.*** 
 
 ## Installation
 
