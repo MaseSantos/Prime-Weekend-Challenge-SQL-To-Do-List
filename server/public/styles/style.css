@@ -16,12 +16,13 @@ h1{
     margin-top: 40px;
     font-size: 60px;
     color: #021479;
+    /* text-shadow: 2px 2px #021479; */
 }
 
 h4{
     margin-top: 35px;
     font-size: 25px;
-    color: #021479;
+    color: #4762ff;
 }
 
 /* Input styling */
