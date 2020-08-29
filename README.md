@@ -4,7 +4,7 @@
 Mase Santos
 >Duration: Weekend Sprint
 
-<!-- ![Task Manager View](./) -->
+![Task Manager View](./TaskManagerDemoGif.gif)
 
 ## Application Overview
 
